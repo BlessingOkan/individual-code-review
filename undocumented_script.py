@@ -1,32 +1,27 @@
-def do_math_stuff(list_of_nums):
-    result = []
-    for num in list_of_nums:
-        if num % 2 == 0:
-            result.append(num * 2)
-        else:
-            result.append(num * 3)
-    return result
+"""Small demo: transform some numbers and words and print the results."""
+
+def transform_numbers(numbers: list[int]) -> list[int]:
+    """Double even numbers and triple odd numbers."""
+    # One pass using a simple inline if
+    return [n * 2 if n % 2 == 0 else n * 3 for n in numbers]
 
 
-def do_string_stuff(list_of_strings):
-    x = ""
-    for s in list_of_strings:
-        if len(s) > 5:
-            x += s.upper() + " "
-        else:
-            x += s.lower() + " "
-    return x.strip()
+def format_strings(words: list[str]) -> str:
+    """Uppercase words > 5 letters, lowercase the rest, then join with spaces."""
+    changed = [w.upper() if len(w) > 5 else w.lower() for w in words]
+    return " ".join(changed)
 
 
-def main():
-    list1 = [1, 2, 3, 4, 5, 6, 7]
-    list2 = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
+def main() -> None:
+    """Quick example run."""
+    sample_numbers = [1, 2, 3, 4, 5, 6, 7]
+    sample_words = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
 
-    processed_nums = do_math_stuff(list1)
-    processed_strings = do_string_stuff(list2)
+    processed_nums = transform_numbers(sample_numbers)
+    processed_strs = format_strings(sample_words)
 
     print("Processed Numbers:", processed_nums)
-    print("Processed Strings:", processed_strings)
+    print("Processed Strings:", processed_strs)
 
 
 if __name__ == "__main__":
