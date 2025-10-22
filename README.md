@@ -2,8 +2,8 @@
 # Individual Code Review and Documentation Project
 
 ## 🎥 Screencast
-Watch the walkthrough: https://go.screenpal.com/watch/XXXXXXXX
-
+# Watch the walkthrough: [
+](https://mycourses.csp.edu/d2l/le/lessons/32575/topics/838545) 
 ## 📘 Overview
 This project was created for **Module 7** to demonstrate professional documentation, Python code refactoring, and self-review practices using GitHub. The goal was to improve the readability, efficiency, and maintainability of a provided Python script by applying PEP 8 and PEP 257 standards.
 
